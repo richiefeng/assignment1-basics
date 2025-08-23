@@ -1,3 +1,4 @@
-import importlib.metadata
+# CS336 Basics Package
+# Simple initialization without metadata dependencies
 
-__version__ = importlib.metadata.version("cs336_basics")
+__version__ = "0.1.0"
