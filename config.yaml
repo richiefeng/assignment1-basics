@@ -1,0 +1,59 @@
+# Training Configuration for Transformer Language Model
+# This file contains all the hyperparameters and settings for training
+
+# Model Architecture
+model:
+  vocab_size: 50257          # Vocabulary size (GPT-2 default)
+  context_length: 512        # Maximum sequence length
+  d_model: 768              # Model dimension
+  num_layers: 12            # Number of transformer layers
+  num_heads: 12             # Number of attention heads
+  d_ff: 3072               # Feed-forward dimension (4 * d_model)
+  rope_theta: 10000.0      # RoPE theta parameter
+
+# Training Parameters
+training:
+  num_epochs: 100           # Total number of training epochs
+  batch_size: 32            # Batch size
+  learning_rate: 1e-4       # Initial learning rate
+  betas: [0.9, 0.999]      # AdamW beta parameters
+  eps: 1e-8                # AdamW epsilon parameter
+  weight_decay: 0.01       # Weight decay (L2 regularization)
+  grad_clip_norm: 1.0      # Gradient clipping norm (0 = no clipping)
+
+# Learning Rate Schedule
+lr_schedule:
+  use_lr_schedule: true     # Whether to use learning rate scheduling
+  max_learning_rate: 1e-3   # Maximum learning rate during warmup
+  min_learning_rate: 1e-5   # Minimum learning rate after decay
+  warmup_iters: 1000        # Number of warmup iterations
+  cosine_cycle_iters: 10000 # Total iterations for cosine decay
+
+# Data
+data:
+  train_data_path: "data/train.txt"     # Path to training data
+  val_data_path: "data/val.txt"         # Path to validation data (optional)
+  
+# Checkpointing
+checkpointing:
+  checkpoint_dir: "checkpoints"          # Directory to save checkpoints
+  checkpoint_interval: 10                # Save checkpoint every N epochs
+  
+# Logging
+logging:
+  log_level: "INFO"                      # Logging level (DEBUG, INFO, WARNING, ERROR)
+  log_file: "training.log"               # Log file path (optional)
+  log_interval: 100                      # Log every N steps during training
+  
+# Hardware
+hardware:
+  device: "auto"                         # Device to use (auto/cpu/cuda/mps)
+  num_workers: 4                         # Number of data loading workers
+  
+# Advanced Options
+advanced:
+  seed: 42                               # Random seed for reproducibility
+  mixed_precision: false                 # Use mixed precision training
+  gradient_accumulation_steps: 1         # Gradient accumulation steps
+  save_optimizer_state: true             # Save optimizer state in checkpoints
+

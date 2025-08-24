@@ -1,0 +1,41 @@
+{
+  "os":  "macOS-15.5-arm64-arm-64bit",
+  "python":  "CPython 3.11.2",
+  "startedAt":  "2025-08-23T23:35:58.336210Z",
+  "args":  [
+    "--config",
+    "config_with_wandb.yaml"
+  ],
+  "program":  "/Users/richie/Desktop/git.nosync/assignment1-basics/train_with_wandb.py",
+  "codePath":  "train_with_wandb.py",
+  "codePathLocal":  "train_with_wandb.py",
+  "git":  {
+    "remote":  "https://github.com/richiefeng/assignment1-basics.git",
+    "commit":  "db676cc9bf371be116b6b64f9b59a6eed25fc348"
+  },
+  "email":  "yfeng@berkeley.edu",
+  "root":  "/Users/richie/Desktop/git.nosync/assignment1-basics",
+  "host":  "Richies-MacBook-Pro-4.local",
+  "executable":  "/Users/richie/Desktop/git.nosync/assignment1-basics/.venv/bin/python3",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "994662584320",
+      "used":  "737295151104"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "apple":  {
+    "name":  "Apple M1 Pro",
+    "ecpuCores":  2,
+    "pcpuCores":  6,
+    "gpuCores":  14,
+    "memoryGb":  16,
+    "swapTotalBytes":  "22548578304",
+    "ramTotalBytes":  "17179869184"
+  },
+  "writerId":  "hc0fsh1jhrser0hw02h08b7qnohpjne3"
+}
